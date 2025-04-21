@@ -44,36 +44,56 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
+<style> 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+</style>
 <body>
 
 
-<section class="hero">
+  <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Learning Uniformly Distributed Embedding Clusters of Stylistic Skills for Physically Simulated Characters</h1>
-              </span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/final_demo.mp4"
-        type="video/mp4">
-      </video>
+
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/FxWnMljiNyg"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
       <h2 class="subtitle has-text-centered">
-        Our controller not only generates high-quality, diverse motions covering the entire dataset but also achieves superior controllability, serving as a cornerstone for diverse applications.
+        Main Video: Our controller not only generates high-quality, diverse motions covering the entire dataset but also achieves superior controllability, serving as a cornerstone for diverse applications.
       </h2>
     </div>
   </div>
@@ -88,7 +108,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Learning natural and diverse behaviors from human motion datasets remains a significant challenge in physics-based character control. Existing conditional adversarial models often suffer from tight and biased embedding distributions where embeddings from the same motion are closely grouped in a small area and shorter motions occupy even less space. Our empirical observations indicate this limits the representational capacity and diversity under each skill. An ideal latent space should be maximally packed by all motion's embedding clusters. Although methods that employ separate embedding space for each motion mitigate this limitation to some extent, introducing a hybrid discrete-continuous embedding space imposes a huge exploration burden on the high-level policy. To address the above limitations, we propose a versatile skill-conditioned controller that learns diverse skills with expressive variations. Our approach leverages the Neural Collapse phenomenon, a natural outcome of the classification-based encoder, to uniformly distributed cluster centers. We additionally propose a novel Embedding Expansion technique to form stylistic embedding clusters for diverse skills that are uniformly distributed on a hypersphere, maximizing the representational area occupied by each skill and minimizing unmapped regions. This maximally packed and uniformly distributed embedding space ensures that embeddings within the same cluster generate behaviors conforming to the characteristics of the corresponding motion clips, yet exhibiting noticeable variations within each cluster. Compared to existing methods, experimental results demonstrate that our controller not only generates high-quality, diverse motions covering the entire dataset but also achieves superior controllability, motion coverage, and diversity under each skill. Both qualitative and quantitative results confirm these traits, enabling our controller to be applied to a wide range of downstream tasks and serving as a cornerstone for diverse applications.
+Learning natural and diverse behaviors from human motion datasets remains a significant challenge in physics-based character control. Existing conditional adversarial models often suffer from tight and biased embedding distributions where embeddings from the same motion are closely grouped in a small area and shorter motions occupy even less space. Our empirical observations indicate this limits the representational capacity and diversity under each skill. An ideal latent space should be maximally packed by all motion’s embedding clusters. Although methods that employ separate embedding space for each motion mitigate this limitation to some extent, introducing a hybrid discrete-continuous embedding space imposes a huge exploration burden on the high-level policy. To address the above limitations, we propose a versatile skill-conditioned controller that learns diverse skills with expressive variations. Our approach leverages the Neural Collapse phenomenon, a natural outcome of the classification-based encoder, to uniformly distributed cluster centers. We additionally propose a novel Embedding Expansion technique to form stylistic embedding clusters for diverse skills that are uniformly distributed on a hypersphere, maximizing the representational area occupied by each skill and minimizing unmapped regions. This maximally packed and uniformly distributed embedding space ensures that embeddings within the same cluster generate behaviors conforming to the characteristics of the corresponding motion clips, yet exhibiting noticeable variations within each cluster. Compared to existing methods, experimental results demonstrate that our controller not only generates high-quality, diverse motions covering the entire dataset but also achieves superior controllability, motion coverage, and diversity under each skill. Both qualitative and quantitative results confirm these traits, enabling our controller to be applied to a wide range of downstream tasks and serving as a cornerstone for diverse applications.
           </p>
         </div>
       </div>
@@ -145,39 +165,6 @@
 </section>
 
 
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">Diversity under Skill</h2>
-      <div class="item item-video4">
-        <div class="item has-text-centered">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/diversity_29_showing.mp4"
-            type="video/mp4">
-          </video>
-
-        </div>
-      </div>
-      <div class="item item-video4">
-        <div class="item has-text-centered">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/diversity_116_showing.mp4"
-            type="video/mp4">
-          </video>
-
-        </div>
-      </div>
-      <div class="item item-video3">
-        <div class="item has-text-centered">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <source src="static/videos/diversity_dodge_right_showing.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="hero is-small is-light">
